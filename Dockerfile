@@ -12,4 +12,5 @@ RUN pacman -Sy pkgfile --noconfirm && \
     mkdir -p /var/spool/rsyslog && \
     /cleanup.sh
 COPY configs /etc/
-ENTRYPOINT ["/usr/bin/supervisord"]
+COPY scripts /scripts/
+ENTRYPOINT ["/scripts/entrypoint.sh"]
