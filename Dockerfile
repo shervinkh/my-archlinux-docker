@@ -14,3 +14,4 @@ RUN pacman -Sy pkgfile --noconfirm && \
 COPY configs /etc/
 COPY scripts /scripts/
 ENTRYPOINT ["/scripts/entrypoint.sh"]
+EXPOSE 9001
