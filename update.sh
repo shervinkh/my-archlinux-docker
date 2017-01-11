@@ -1,4 +1,4 @@
 #!/bin/bash
 
-yes | pacman -Syu 2> /dev/null && pkgfile --update
+pacman-key --refresh-keys && yes | pacman -Syu 2> /dev/null && pkgfile --update
 
